@@ -1,0 +1,139 @@
+<style>
+  .carouselCont {
+    position: relative;
+    display: flex;
+  }
+
+  .carouselCont > .blur {
+    width: 100%;
+    -webkit-filter: blur(6px); /* Safari 6.0 - 9.0 */
+    filter: blur(7px);
+  }
+  .circularimagechanger {
+    position: absolute;
+    border: 11px solid white;
+    z-index: 2000;
+    height: 100%;
+    top: 30px;
+    border-radius: 50%;
+    right: 5%;
+    width: 40%;
+    /* background-color: white; */
+    overflow: hidden;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+
+  .circularimagechanger img {
+    height: 620px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 1.4s;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  .carouselCont .textCont {
+    position: absolute;
+    max-width: 490px;
+    z-index: 2000;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    top: 70px;
+    left: 10%;
+  }
+
+  .carouselCont .textCont h2 {
+    font-size: 43px;
+    margin-bottom: 15px;
+  }
+
+  .carouselCont .textCont p {
+    font-size: 14px;
+    max-width: 430px;
+
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  .carouselCont .textCont button:first-child {
+    margin-top: 35px;
+  }
+
+  .show {
+    opacity: 1 !important;
+    transition: 1.4s;
+  }
+  .desktop_only {
+    display: none;
+  }
+  @media (min-width: 980px) {
+    .desktop_only {
+      display: block;
+    }
+  }
+</style>
+
+<div class="carouselCont desktop_only">
+  <div class="textCont">
+    <h2>
+      Quality care you deserve
+    </h2>
+    <p>
+      Home is where the heart is! and that's why Living spring services'
+      flexible care options help you keep your independence. From hourly,
+      overnight or live-in care - you'll continue to live the life you love from
+      the coziness of your own home
+    </p>
+    <br />
+    <br />
+    <%- include("Button.ejs", {content: "Schedule a Consultation", colorClass:
+    "pink"}) %> <%- include("Button.ejs", {content: "Our services", colorClass:
+    "darkblue"}) %>
+  </div>
+
+  <img class="blur" src="/images/home.jpg" alt="" />
+  <div class="circularimagechanger">
+    <img class="show" src="/images/health5.jpg" alt="" />
+    <img src="/images/health4.jpg" alt="" />
+    <img src="/images/health3.jpg" alt="" />
+  </div>
+</div>
+
+<script>
+  let changingCircleImages = document.querySelectorAll(
+    ".circularimagechanger img"
+  );
+  changingCircleImages = [...changingCircleImages];
+  let imageChangeIndex = 0;
+  console.log(changingCircleImages);
+  const delay = async (time) => {
+    await new Promise((res, rej) => {
+      return setTimeout(() => {
+        res("done");
+        console.log("blah");
+      }, time);
+    });
+  };
+  const onloadFunc = () => {
+    imageChange();
+  };
+
+  window.onload = onloadFunc;
+
+  async function imageChange() {
+    for (let i = 0; i < changingCircleImages.length; i++) {
+      //   console.log(i);
+      changingCircleImages[i].classList.remove("show");
+    }
+    if (imageChangeIndex === 2) {
+      imageChangeIndex = 0;
+    } else {
+      imageChangeIndex++;
+    }
+    changingCircleImages[imageChangeIndex].classList.add("show");
+    await delay(5000);
+    imageChange();
+  }
+</script>
