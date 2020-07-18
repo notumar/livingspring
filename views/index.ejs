@@ -1,195 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Living Spring
-    </title>
-  </head>
+<body>
+  <div class="container">
+    <div class="section1">
+      <div class="logoCont">
+        <img src="images/livingspring.png" id="Logo" alt="LOGO" />
+      </div>
+      <div class="detailsCont">
+        <div class="flex">
+          <i class="fa fa-phone" aria-hidden="true"></i>
 
-  <style>
-    #Logo {
-      height: 120px;
-    }
-    .section1 {
-      max-width: 1200px;
-      align-items: center;
-      margin: auto;
-      display: flex;
-      flex-flow: column;
-    }
-    .container {
-      font-family: "Roboto", sans-serif;
-    }
-
-    .detailsCont {
-      display: flex;
-      justify-content: center;
-      flex-flow: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .detailsCont i {
-      color: #eb2388;
-    }
-    .pink-text {
-      color: #eb2388;
-    }
-    .detailsCont p {
-      padding: 10px;
-    }
-    .flex {
-      display: flex;
-      align-items: center;
-      flex-flow: column;
-    }
-
-    .section2 {
-      max-width: 1200px;
-      padding: 50px;
-      margin: auto;
-    }
-    .section2 .flex {
-      justify-content: flex-start;
-    }
-    .section3 h2 {
-      color: #eb2388;
-    }
-    .section3 {
-      max-width: 1200px;
-      align-items: flex-start;
-      padding: 50px;
-      margin: auto;
-    }
-    .greycont {
-      /* background: #eee; */
-    }
-    .services-image img {
-      border-radius: 50%;
-    }
-    .section2 h2 {
-      text-align: left;
-      margin-bottom: 9px;
-    }
-    .section2 img {
-      border-radius: 50%;
-      margin-right: 40px;
-    }
-
-    .mission-text {
-      max-width: 450px;
-    }
-    .mission-text p {
-      font-weight: 200;
-    }
-
-    .services {
-      list-style: none;
-      flex: 2;
-    }
-
-    .about-right {
-      flex: 4;
-      padding: 35px;
-      padding-top: 0px;
-    }
-    .about-right p {
-      font-weight: 400;
-      /* font-family: sans-serif; */
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      line-height: 40px;
-      text-align: justify;
-    }
-    .services p {
-      color: #eb2388;
-      font-size: 22px;
-      /* font-weight: 300; */
-      margin-bottom: 18px;
-    }
-    .services li {
-      box-shadow: 1px 0px 14px #bbb;
-      padding: 12px;
-      /* font-weight: 200; */
-      border-left: 5px solid #eb2388;
-      cursor: pointer;
-      margin-bottom: 8px;
-      color: #333 !important;
-      background: #fff;
-    }
-    .services li:hover {
-      /* font-weight: 200; */
-      background: #eb2388;
-      color: white;
-      transition: 0.5s;
-    }
-    .services a {
-      text-decoration: none;
-      color: inherit;
-      /* color: #333; */
-      /* color:  */
-    }
-
-    .services li:hover a {
-      color: white;
-    }
-
-    @media (min-width: 980px) {
-      .flex {
-        flex-flow: row;
-        justify-content: space-between;
-      }
-      .section1 {
-        flex-flow: row;
-        justify-content: space-between;
-      }
-      .service-timing {
-        display: block;
-      }
-
-      .detailsCont {
-        flex-flow: row;
-        text-align: left;
-      }
-    }
-  </style>
-  <body>
-    <%- include("header.ejs") %>
-
-    <div class="container">
-      <div class="section1">
-        <div class="logoCont">
-          <img src="images/livingspring.png" id="Logo" alt="LOGO" />
+          <p class="service-timing">
+            24/7 services available<br />
+            773 -543 -7430
+          </p>
         </div>
-        <div class="detailsCont">
-          <div class="flex">
-            <i class="fa fa-phone" aria-hidden="true"></i>
+        <div class="flex">
+          <i class="fa fa-heart" aria-hidden="true"></i>
 
-            <p class="service-timing">
-              24/7 services available<br />
-              773 -543 -7430
-            </p>
-          </div>
-          <div class="flex">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-
-            <p class="service-timing">
-              Get home care today<br />
-              info@livingspringservices.com
-            </p>
-          </div>
+          <p class="service-timing">
+            Get home care today<br />
+            info@livingspringservices.com
+          </p>
         </div>
       </div>
+    </div>
 
-      <%- include("carousel.ejs") %> <%- include("mobileTagLine.ejs") %>
+    <%- include("carousel.ejs") %> <%- include("mobileTagLine.ejs") %>
 
-      <!-- <div class="section2">
+    <!-- <div class="section2">
         <div class="flex">
           <img src="/images/woman-white.jpg" alt="" height="300px" />
           <div class="mission-text">
@@ -205,82 +42,75 @@
           </div>
         </div>
       </div> -->
-      <div class="greycont">
-        <div class="section3 flex">
-          <ul class="services">
-            <p>Our services</p>
-            <li>
-              <a href="/services/senior-home-care-services"
-                >Senior home care services</a
-              >
-            </li>
-            <li>
-              <a href="/services/elderly-care-services"
-                >Elderly care services</a
-              >
-            </li>
-            <li>
-              <a href="/services/alzheimer-demential-memory-care-services"
-                >Alzheimer, Demential and memory care services</a
-              >
-            </li>
-            <li>
-              <a href="/services/respite-care-services"
-                >Respite care services</a
-              >
-            </li>
-            <li>
-              <a href="/services/hospice-care-services"
-                >Hospice care services</a
-              >
-            </li>
-            <li>
-              <a href="/services/fall-prevention-services"
-                >Fall prevention services</a
-              >
-            </li>
-            <li>
-              <a href="/services/post-surgical-care-services"
-                >Post surgical care services</a
-              >
-            </li>
-            <li>
-              <a href="/services/personal-care-and-companionship"
-                >Show More Services</a
-              >
-            </li>
-          </ul>
-          <div class="about-right">
-            <!-- <img src="/images/health6.jpg" height="300px" alt="" /> -->
-            <h2>Welcome to Living spring Services.</h2>
-            <p>
-              At Living Spring Home Care Services, our mission is to improve the
-              health and quality of life of the seniors and adults with
-              disabilities as we serve their needs with dignity, respect,
-              responsiveness and compassion by providing professional home care
-              services.
-            </p>
-            <p>
-              The owner founded this agency by working as a private home care
-              provider, as a care manager, Scheduler and recruiter for several
-              agencies in which she established relationships with outside
-              members of the home care field and care providers.
-            </p>
-            <p>
-              In doing so, she became such an asset to home care agencies that
-              the demand for her services became overwhelming. As a result, she
-              was then obligated to create a staff, form a business, and inherit
-              a lifelong career in serving clients. Behind this much needed
-              service, she developed a large reputation of providing the highest
-              quality care within the community. she established valued
-              relationships with clients, caregivers, and many other people
-              within the community in which she serviced. We intend to continue
-              that custom by hiring quality home care providers. Thank you for
-              choosing Living Spring Services to Serve you!!
-            </p>
-          </div>
+    <div class="greycont">
+      <div class="section3 flex">
+        <ul class="services">
+          <p>Our services</p>
+          <li>
+            <a href="/services/senior-home-care-services"
+              >Senior home care services</a
+            >
+          </li>
+          <li>
+            <a href="/services/elderly-care-services">Elderly care services</a>
+          </li>
+          <li>
+            <a href="/services/alzheimer-demential-memory-care-services"
+              >Alzheimer, Demential and memory care services</a
+            >
+          </li>
+          <li>
+            <a href="/services/respite-care-services">Respite care services</a>
+          </li>
+          <li>
+            <a href="/services/hospice-care-services">Hospice care services</a>
+          </li>
+          <li>
+            <a href="/services/fall-prevention-services"
+              >Fall prevention services</a
+            >
+          </li>
+          <li>
+            <a href="/services/post-surgical-care-services"
+              >Post surgical care services</a
+            >
+          </li>
+          <li>
+            <a href="/services/personal-care-and-companionship"
+              >Show More Services</a
+            >
+          </li>
+        </ul>
+        <div class="about-right">
+          <!-- <img src="/images/health6.jpg" height="300px" alt="" /> -->
+          <h2>Welcome to Living spring Services.</h2>
+          <p>
+            At Living Spring Home Care Services, our mission is to improve the
+            health and quality of life of the seniors and adults with
+            disabilities as we serve their needs with dignity, respect,
+            responsiveness and compassion by providing professional home care
+            services.
+          </p>
+          <p>
+            The owner founded this agency by working as a private home care
+            provider, as a care manager, Scheduler and recruiter for several
+            agencies in which she established relationships with outside members
+            of the home care field and care providers.
+          </p>
+          <p>
+            In doing so, she became such an asset to home care agencies that the
+            demand for her services became overwhelming. As a result, she was
+            then obligated to create a staff, form a business, and inherit a
+            lifelong career in serving clients. Behind this much needed service,
+            she developed a large reputation of providing the highest quality
+            care within the community. she established valued relationships with
+            clients, caregivers, and many other people within the community in
+            which she serviced. We intend to continue that custom by hiring
+            quality home care providers. Thank you for choosing Living Spring
+            Services to Serve you!!
+          </p>
         </div>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</body>
