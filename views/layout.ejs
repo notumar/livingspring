@@ -6,325 +6,74 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Living Spring
+      <%=title %>
     </title>
   </head>
 
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap");
-    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap");
-    #Logo {
-      height: 120px;
-    }
-    .section1 {
-      max-width: 1200px;
-      align-items: center;
-      margin: auto;
-      display: flex;
-      flex-flow: column;
-    }
-    .container {
-      font-family: "Roboto", sans-serif;
-    }
+  <body>
+    <ul class="side-bar">
+      <div class="logoCont">
+        <img src="/images/livingspring.png" alt="logo" height="140px" />
+      </div>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about-us">About us</a></li>
+      <li><a href="/services">Our Services</a></li>
+      <li><a href="/home-care-resources">Home care resources</a></li>
+      <li><a href="/apply-now">Apply Now</a></li>
+      <li><a href="/contact-us">Contact us</a></li>
+    </ul>
+    <div class="overlay"></div>
 
-    .detailsCont {
-      display: flex;
-      justify-content: center;
-      flex-flow: column;
-      align-items: center;
-      text-align: center;
-    }
+    <ul id="topNav" class="desktop_only">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about-us">About us</a></li>
+      <li><a href="/services">Our Services</a></li>
+      <li><a href="/home-care-resources">Home care resources</a></li>
+      <li><a href="/apply-now">Apply Now</a></li>
+      <li><a href="/contact-us">Contact us</a></li>
+    </ul>
 
-    .detailsCont i {
-      color: #eb2388;
-    }
-    .pink-text {
-      color: #eb2388;
-    }
-    .detailsCont p {
-      padding: 10px;
-    }
-    .flex {
-      display: flex;
-      align-items: center;
-      flex-flow: column;
-    }
+    <ul id="mobiletopNav" class="mobile_header">
+      <div class="toggler">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </ul>
 
-    .section2 {
-      max-width: 1200px;
-      padding: 50px;
-      margin: auto;
-    }
-    .section2 .flex {
-      justify-content: flex-start;
-    }
-    .section3 h2 {
-      color: #eb2388;
-    }
-    .section3 {
-      max-width: 1200px;
-      align-items: flex-start;
-      padding: 50px;
-      margin: auto;
-    }
+    <div class="box-padding"></div>
+    <div class="section1">
+      <div class="logoCont">
+        <img src="images/livingspring.png" id="Logo" alt="LOGO" />
+      </div>
+      <div class="detailsCont container">
+        <div class="flex">
+          <i class="fa fa-phone" aria-hidden="true"></i>
 
-    .services-image img {
-      border-radius: 50%;
-    }
-    .section2 h2 {
-      text-align: left;
-      margin-bottom: 9px;
-    }
-    .section2 img {
-      border-radius: 50%;
-      margin-right: 40px;
-    }
+          <p class="service-timing">
+            24/7 services available<br />
+            773 -543 -7430
+          </p>
+        </div>
+        <div class="flex">
+          <i class="fa fa-heart" aria-hidden="true"></i>
 
-    .mission-text {
-      max-width: 450px;
-    }
-    .mission-text p {
-      font-weight: 200;
-    }
-
-    .services {
-      list-style: none;
-      flex: 2;
-    }
-
-    .about-right {
-      flex: 4;
-      padding: 35px;
-      padding-top: 0px;
-    }
-    .about-right p {
-      font-weight: 400;
-      /* font-family: sans-serif; */
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      line-height: 40px;
-      text-align: justify;
-    }
-    .services p {
-      color: #eb2388;
-      font-size: 22px;
-      /* font-weight: 300; */
-      margin-bottom: 18px;
-    }
-    .services li {
-      box-shadow: 1px 0px 14px #bbb;
-      padding: 12px;
-      /* font-weight: 200; */
-      border-left: 5px solid #eb2388;
-      cursor: pointer;
-      margin-bottom: 8px;
-      color: #333 !important;
-      background: #fff;
-    }
-    .services li:hover {
-      /* font-weight: 200; */
-      background: #eb2388;
-      color: white;
-      transition: 0.5s;
-    }
-    .services a {
-      text-decoration: none;
-      color: inherit;
-      /* color: #333; */
-      /* color:  */
-    }
-
-    .services li:hover a {
-      color: white;
-    }
-
-    @media (min-width: 980px) {
-      .flex {
-        flex-flow: row;
-        justify-content: space-between;
-      }
-      .section1 {
-        flex-flow: row;
-        justify-content: space-between;
-      }
-      .service-timing {
-        display: block;
-      }
-
-      .detailsCont {
-        flex-flow: row;
-        text-align: left;
-      }
-    }
-    /* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap"); */
-    * {
-      box-sizing: border-box;
-      margin: 0px;
-      padding: 0px;
-    }
-    nav {
-      padding: 10px;
-    }
-
-    #topNav {
-      list-style: none;
-      display: flex;
-      background: linear-gradient(to right, #eb2388, #eb2388, #f7429c, #f17eb8);
-      box-shadow: 1px 0px 14px #bbb;
-      align-items: center;
-      justify-content: center;
-      display: none;
-    }
-    #mobiletopNav {
-      list-style: none;
-      position: fixed;
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      padding: 10px;
-      background: linear-gradient(to right, #eb2388, #eb2388, #f7429c, #f17eb8);
-      box-shadow: 1px 0px 14px #bbb;
-    }
-    #topNav li {
-      padding: 18px;
-      border-top-right-radius: 20px;
-      border-bottom-right-radius: 20px;
-      font-family: "Roboto", sans-serif;
-    }
-
-    #topNav li a {
-      text-decoration: none;
-      color: white;
-    }
-    #topNav li a:hover {
-      text-decoration: underline;
-      color: #1c1850;
-    }
-    .desktop_only {
-      display: none;
-    }
-    .toggler {
-      margin: 9.5px 0 9.5px 20px;
-
-      width: 40px;
-      cursor: pointer;
-      height: 20px;
-      -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-      -khtml-user-select: none; /* Konqueror HTML */
-      -moz-user-select: none; /* Old versions of Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
-      user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-    }
-    .toggler div {
-      background: #fff;
-      padding: 2px;
-      margin-bottom: 5px;
-      transition: 0.1s;
-      width: 50%;
-      -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-      -khtml-user-select: none; /* Konqueror HTML */
-      -moz-user-select: none; /* Old versions of Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
-      user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-    }
-    .box-padding {
-      padding-top: 60px;
-      display: block;
-    }
-
-    .side-bar {
-      position: fixed;
-      background: white;
-      height: 100%;
-      width: 60%;
-      box-shadow: 1px 0px 13px #555;
-      max-width: 350px;
-      z-index: 10000;
-      left: -100vh;
-      transition: 0.5s;
-    }
-
-    .slideSideBar {
-      left: 0;
-      transition: 0.5s;
-    }
-    .overlay {
-      background: rgba(0, 0, 0, 0.8);
-      position: fixed;
-      height: 100%;
-      width: 100%;
-      z-index: 900;
-      display: none;
-    }
-    .logoCont {
-      display: flex;
-
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #eee;
-    }
-
-    .side-bar li {
-      padding: 10px;
-    }
-
-    .side-bar li a {
-      text-decoration: none;
-      color: #f7429c;
-    }
-
-    @media (min-width: 980px) {
-      .box-padding {
-        display: none;
-      }
-      #topNav {
-        display: flex;
-      }
-      #mobiletopNav {
-        display: none;
-      }
-    }
-  </style>
-  <ul class="side-bar">
-    <div class="logoCont">
-      <img src="/images/livingspring.png" alt="logo" height="140px" />
+          <p class="service-timing">
+            Get home care today<br />
+            <a href="https://info@livingspringservices.com"
+              >info@livingspringservices.com</a
+            >
+          </p>
+        </div>
+      </div>
     </div>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about-us">About us</a></li>
-    <li><a href="/services">Our Services</a></li>
-    <li><a href="/home-care-resources">Home care resources</a></li>
-    <li><a href="/apply-now">Apply Now</a></li>
-    <li><a href="/contact-us">Contact us</a></li>
-  </ul>
-  <div class="overlay"></div>
 
-  <ul id="topNav" class="desktop_only">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about-us">About us</a></li>
-    <li><a href="/services">Our Services</a></li>
-    <li><a href="/home-care-resources">Home care resources</a></li>
-    <li><a href="/apply-now">Apply Now</a></li>
-    <li><a href="/contact-us">Contact us</a></li>
-  </ul>
+    <%- body %>
+  </body>
 
-  <ul id="mobiletopNav" class="mobile_header">
-    <div class="toggler">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </ul>
-
-  <div class="box-padding"></div>
-
-  <%- body %>
   <script>
     const toggle = document.querySelector(".toggler");
     const sideBar = document.querySelector(".side-bar");

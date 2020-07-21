@@ -1,32 +1,7 @@
-<body>
-  <div class="container">
-    <div class="section1">
-      <div class="logoCont">
-        <img src="images/livingspring.png" id="Logo" alt="LOGO" />
-      </div>
-      <div class="detailsCont">
-        <div class="flex">
-          <i class="fa fa-phone" aria-hidden="true"></i>
+<div class="container">
+  <%- include("carousel.ejs") %> <%- include("mobileTagLine.ejs") %>
 
-          <p class="service-timing">
-            24/7 services available<br />
-            773 -543 -7430
-          </p>
-        </div>
-        <div class="flex">
-          <i class="fa fa-heart" aria-hidden="true"></i>
-
-          <p class="service-timing">
-            Get home care today<br />
-            info@livingspringservices.com
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <%- include("carousel.ejs") %> <%- include("mobileTagLine.ejs") %>
-
-    <!-- <div class="section2">
+  <!-- <div class="section2">
         <div class="flex">
           <img src="/images/woman-white.jpg" alt="" height="300px" />
           <div class="mission-text">
@@ -42,75 +17,37 @@
           </div>
         </div>
       </div> -->
-    <div class="greycont">
-      <div class="section3 flex">
-        <ul class="services">
-          <p>Our services</p>
-          <li>
-            <a href="/services/senior-home-care-services"
-              >Senior home care services</a
-            >
-          </li>
-          <li>
-            <a href="/services/elderly-care-services">Elderly care services</a>
-          </li>
-          <li>
-            <a href="/services/alzheimer-demential-memory-care-services"
-              >Alzheimer, Demential and memory care services</a
-            >
-          </li>
-          <li>
-            <a href="/services/respite-care-services">Respite care services</a>
-          </li>
-          <li>
-            <a href="/services/hospice-care-services">Hospice care services</a>
-          </li>
-          <li>
-            <a href="/services/fall-prevention-services"
-              >Fall prevention services</a
-            >
-          </li>
-          <li>
-            <a href="/services/post-surgical-care-services"
-              >Post surgical care services</a
-            >
-          </li>
-          <li>
-            <a href="/services/personal-care-and-companionship"
-              >Show More Services</a
-            >
-          </li>
-        </ul>
-        <div class="about-right">
-          <!-- <img src="/images/health6.jpg" height="300px" alt="" /> -->
-          <h2>Welcome to Living spring Services.</h2>
-          <p>
-            At Living Spring Home Care Services, our mission is to improve the
-            health and quality of life of the seniors and adults with
-            disabilities as we serve their needs with dignity, respect,
-            responsiveness and compassion by providing professional home care
-            services.
-          </p>
-          <p>
-            The owner founded this agency by working as a private home care
-            provider, as a care manager, Scheduler and recruiter for several
-            agencies in which she established relationships with outside members
-            of the home care field and care providers.
-          </p>
-          <p>
-            In doing so, she became such an asset to home care agencies that the
-            demand for her services became overwhelming. As a result, she was
-            then obligated to create a staff, form a business, and inherit a
-            lifelong career in serving clients. Behind this much needed service,
-            she developed a large reputation of providing the highest quality
-            care within the community. she established valued relationships with
-            clients, caregivers, and many other people within the community in
-            which she serviced. We intend to continue that custom by hiring
-            quality home care providers. Thank you for choosing Living Spring
-            Services to Serve you!!
-          </p>
-        </div>
+  <div class="greycont">
+    <div class="section3 flex">
+      <%- include ("serviceMenu.ejs") %>
+      <div style="margin-left: 30px;" class="about-right things-to-know">
+        <!-- <img src="/images/health6.jpg" height="300px" alt="" /> -->
+        <h2>Welcome to Living Spring Services.</h2>
+        <p>
+          At Living Spring Home Care Services, our mission is to improve the
+          health and quality of life of the seniors and adults with disabilities
+          as we serve their needs with dignity, respect, responsiveness and
+          compassion by providing professional home care services.
+        </p>
+        <p>
+          The owner founded this agency by working as a private home care
+          provider, as a care manager, Scheduler and recruiter for several
+          agencies in which she established relationships with outside members
+          of the home care field and care providers.
+        </p>
+        <p>
+          In doing so, she became such an asset to home care agencies that the
+          demand for her services became overwhelming. As a result, she was then
+          obligated to create a staff, form a business, and inherit a lifelong
+          career in serving clients. Behind this much needed service, she
+          developed a large reputation of providing the highest quality care
+          within the community. she established valued relationships with
+          clients, caregivers, and many other people within the community in
+          which she serviced. We intend to continue that custom by hiring
+          quality home care providers. Thank you for choosing Living Spring
+          Services to Serve you!!
+        </p>
       </div>
     </div>
   </div>
-</body>
+</div>
