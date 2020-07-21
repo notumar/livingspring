@@ -49,7 +49,7 @@ for (let page of pages) {
 //   res.render("index");
 // });
 
-const PORT = process.env.NODE_ENV || 3000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
