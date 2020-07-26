@@ -395,8 +395,9 @@ nav {
 }
 
 .containerForTagline p {
-  /* margin-top: 10px; */
+  margin-top: 10px;
   font-weight: 200;
+  text-align: center;
   /* color: #f7429c; */
 }
 @media (min-width: 980px) {
