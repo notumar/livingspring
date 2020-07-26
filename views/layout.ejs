@@ -1,91 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      <%=title %>
-    </title>
-  </head>
 
-  <body>
-    <ul class="side-bar">
-      <div class="logoCont">
-        <img src="/images/livingspring.png" alt="logo" height="140px" />
-      </div>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about-us">About us</a></li>
-      <li><a href="/services">Our Services</a></li>
-      <li><a href="/home-care-resources">Home care resources</a></li>
-      <li><a href="/apply-now">Apply Now</a></li>
-      <li><a href="/contact-us">Contact us</a></li>
-    </ul>
-    <div class="overlay"></div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%=title %>
+  </title>
+</head>
 
-    <ul id="topNav" class="desktop_only">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about-us">About us</a></li>
-      <li><a href="/services">Our Services</a></li>
-      <li><a href="/home-care-resources">Home care resources</a></li>
-      <li><a href="/apply-now">Apply Now</a></li>
-      <li><a href="/contact-us">Contact us</a></li>
-    </ul>
-
-    <ul id="mobiletopNav" class="mobile_header">
-      <div class="toggler">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </ul>
-
-    <div class="box-padding"></div>
-    <div class="section1">
-      <div class="logoCont">
-        <img src="images/livingspring.png" id="Logo" alt="LOGO" />
-      </div>
-      <div class="detailsCont container">
-        <div class="flex">
-          <i class="fa fa-phone" aria-hidden="true"></i>
-
-          <p class="service-timing">
-            24/7 services available<br />
-            773 -543 -7430
-          </p>
+<body>
+  <ul class="side-bar">
+    <div class="logoCont">
+      <img src="/images/livingspring.png" alt="logo" height="140px" />
+    </div>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about-us">About us</a></li>
+    <li>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="/services">Our Services</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/services/senior-home-care-services">Senior Home Care Services</a>
+          <a href="/services/elderly-care-services">Elderly Care Services</a>
+          <a href="/services/alzheimer-demential-care-services">Alzheimer Dementia Care Services</a>
+          <a href="/services/respite-care-services">Respite Care Services</a>
+          <a href="/services/hospice-care-services">Hospice Care Services</a>
+          <a href="/services/fall-prevention-care-services">Fall Prevention Care Services</a>
+          <a href="/services/post-surgical-care-services">Post Surgical Care Services</a>
+          <a href="/services/personal-care-and-companionship">Personal Care and Companionship</a>
         </div>
-        <div class="flex">
-          <i class="fa fa-heart" aria-hidden="true"></i>
-
-          <p class="service-timing">
-            Get home care today<br />
-            <a href="https://info@livingspringservices.com"
-              >info@livingspringservices.com</a
-            >
-          </p>
+      </div>
+    </li>
+    <li>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="/home-care-resources">Home Care Services</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/home-care-resources/getting-started  ">Getting Started</a>
         </div>
+      </div>
+    </li>
+    <li><a href="/apply-now">Apply Now</a></li>
+    <li><a href="/contact-us">Contact us</a></li>
+  </ul>
+  <div class="overlay"></div>
+
+  <ul id="topNav" class="desktop_only">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about-us">About us</a></li>
+    <li>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="/services">Our Services</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/services/senior-home-care-services">Senior Home Care Services</a>
+          <a href="/services/elderly-care-services">Elderly Care Services</a>
+          <a href="/services/alzheimer-demential-care-services">Alzheimer Dementia Care Services</a>
+          <a href="/services/respite-care-services">Respite Care Services</a>
+          <a href="/services/hospice-care-services">Hospice Care Services</a>
+          <a href="/services/fall-prevention-care-services">Fall Prevention Care Services</a>
+          <a href="/services/post-surgical-care-services">Post Surgical Care Services</a>
+          <a href="/services/personal-care-and-companionship">Personal Care and Companionship</a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="/home-care-resources">Home Care Services</a>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/home-care-resources/getting-started">Getting Started</a>
+        </div>
+      </div>
+    </li>
+    <li><a href="/apply-now">Apply Now</a></li>
+    <li><a href="/contact-us">Contact us</a></li>
+  </ul>
+
+  <ul id="mobiletopNav" class="mobile_header">
+    <div class="toggler">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </ul>
+
+  <div class="box-padding"></div>
+  <div class="section1">
+    <div class="logoCont">
+      <img src="/images/livingspring.png" id="Logo" alt="LOGO" />
+    </div>
+    <div class="detailsCont container">
+      <div class="flex">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+
+        <p class="service-timing">
+          24/7 services available<br />
+          773 -543 -7430
+        </p>
+      </div>
+      <div class="flex">
+        <i class="fa fa-heart" aria-hidden="true"></i>
+
+        <p class="service-timing">
+          Get home care today<br />
+          <a href="https://info@livingspringservices.com">info@livingspringservices.com</a>
+        </p>
       </div>
     </div>
+  </div>
+  <%- body %>
+</body>
 
-    <%- body %>
-  </body>
+<script>
+  const toggle = document.querySelector(".toggler");
+  const sideBar = document.querySelector(".side-bar");
+  const overlay = document.querySelector(".overlay");
+  toggle.addEventListener("click", (e) => {
+    sideBar.classList.toggle("slideSideBar");
+    overlay.style.display = "block";
+  });
 
-  <script>
-    const toggle = document.querySelector(".toggler");
-    const sideBar = document.querySelector(".side-bar");
-    const overlay = document.querySelector(".overlay");
-    toggle.addEventListener("click", (e) => {
-      sideBar.classList.toggle("slideSideBar");
-      overlay.style.display = "block";
-    });
+  overlay.addEventListener("click", (e) => {
+    overlay.style.display = "none";
+    sideBar.classList.toggle("slideSideBar");
+  });
+</script>
 
-    overlay.addEventListener("click", (e) => {
-      overlay.style.display = "none";
-      sideBar.classList.toggle("slideSideBar");
-    });
-  </script>
 </html>
