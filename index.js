@@ -1,6 +1,8 @@
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const bodyParser = require("body-parser");
+const servicesRouter = require("./routers/servicesRouter");
+const homecareRouter = require("./routers/homecareRouter");
 const cors = require("cors");
 const path = require("path");
 
@@ -12,6 +14,9 @@ app.use(bodyParser());
 app.use(cors());
 app.use(expressLayouts);
 
+app.use("/services", servicesRouter);
+app.use("/home-care-resources", homecareRouter);
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
@@ -19,13 +24,7 @@ app.get("/", (req, res) => {
   res.render("index", { title: "Living Spring" });
 });
 
-let pages = [
-  "about-us",
-  "services",
-  "apply-now",
-  "contact-us",
-  "home-care-resources",
-];
+let pages = ["about-us", "apply-now", "contact-us"];
 
 for (let page of pages) {
   app.get(`/${page}`, (req, res) => {
