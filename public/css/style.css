@@ -315,6 +315,8 @@ nav {
 }
 .side-bar li .dropdown-content {
   background: white;
+  height: 100px;
+  overflow-y: scroll;
 }
 .side-bar li .dropdown .dropbtn {
   color: #eb2388;
