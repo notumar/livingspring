@@ -4,11 +4,13 @@
     display: flex;
   }
 
-  .carouselCont > .blur {
+  .carouselCont>.blur {
     width: 100%;
-    -webkit-filter: blur(6px); /* Safari 6.0 - 9.0 */
+    -webkit-filter: blur(6px);
+    /* Safari 6.0 - 9.0 */
     filter: blur(7px);
   }
+
   .circularimagechanger {
     position: absolute;
     border: 11px solid white;
@@ -34,6 +36,7 @@
     opacity: 0;
     transform: translate(-50%, -50%);
   }
+
   .carouselCont .textCont {
     position: absolute;
     max-width: 490px;
@@ -65,9 +68,11 @@
     opacity: 1 !important;
     transition: 1.4s;
   }
+
   .desktop_only {
     display: none;
   }
+
   @media (min-width: 980px) {
     .desktop_only {
       display: block;
@@ -92,7 +97,7 @@
     "pink"}) %>
   </div>
 
-  <img class="blur" src="/images/home.jpg" alt="" />
+  <img class="blur" src="/images/alzheimers-image.jpg" alt="" />
   <div class="circularimagechanger">
     <img class="show" src="/images/health5.jpg" alt="" />
     <img src="/images/health4.jpg" alt="" />
