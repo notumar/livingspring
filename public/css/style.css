@@ -679,6 +679,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   background: #eb2388;
+  padding: 10px;
 }
 .footer-image {
   height: 80px;
