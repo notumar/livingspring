@@ -80,7 +80,7 @@
   }
 }
 .section1 {
-  max-width: 1200px;
+  width: 100%;
   align-items: center;
   margin: auto;
   display: flex;
@@ -210,7 +210,7 @@
   }
   .section1 {
     flex-flow: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .service-timing {
     display: block;

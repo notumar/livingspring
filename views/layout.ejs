@@ -21,11 +21,11 @@
     <li><a href="/about-us">About us</a></li>
     <li>
       <div class="dropdown">
-        <button class="dropbtn">
+        <button class="dropbtn" onclick="myFunction()">
           Our Services
           <i class="fa fa-caret-down"></i>
         </button>
-        <div class="dropdown-content">
+        <div id="myDropdown" class="dropdown-content">
           <a href="/services">General Services</a>
           <a href="/services/senior-home-care-services">Senior Home Care Services</a>
           <a href="/services/elderly-care-services">Elderly Care Services</a>
@@ -128,20 +128,7 @@
   <%- body %>
 </body>
 
-<script>
-  const toggle = document.querySelector(".toggler");
-  const sideBar = document.querySelector(".side-bar");
-  const overlay = document.querySelector(".overlay");
-  toggle.addEventListener("click", (e) => {
-    sideBar.classList.toggle("slideSideBar");
-    overlay.style.display = "block";
-  });
 
-  overlay.addEventListener("click", (e) => {
-    overlay.style.display = "none";
-    sideBar.classList.toggle("slideSideBar");
-  });
-</script>
 <footer>
 
   <div class="footer-address">
@@ -161,5 +148,37 @@
   </div>
   <div class="footer-image"><img src="/images/PHOTO-2020-07-27-22-37-31.png" alt="logo" height="35px" /></div>
 </footer>
+
+<script>
+  const toggle = document.querySelector(".toggler");
+  const sideBar = document.querySelector(".side-bar");
+  const overlay = document.querySelector(".overlay");
+  toggle.addEventListener("click", (e) => {
+    sideBar.classList.toggle("slideSideBar");
+    overlay.style.display = "block";
+  });
+
+  overlay.addEventListener("click", (e) => {
+    overlay.style.display = "none";
+    sideBar.classList.toggle("slideSideBar");
+  });
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
 
 </html>
