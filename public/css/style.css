@@ -84,6 +84,7 @@
   align-items: center;
   margin: auto;
   display: flex;
+  border-bottom: 1px solid lightgray;
 }
 .container {
   font-family: "Roboto", sans-serif;
